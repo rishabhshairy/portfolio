@@ -107,6 +107,7 @@ export default function About() {
                     aria-valuenow="100"
                     aria-valuemin="0"
                     aria-valuemax="100"
+                    style={{width:'100%'}}
                   ></div>
                 </div>
               </div>
@@ -122,6 +123,7 @@ export default function About() {
                     aria-valuenow="90"
                     aria-valuemin="0"
                     aria-valuemax="100"
+                    style={{width:'90%'}}
                   ></div>
                 </div>
               </div>
@@ -137,6 +139,7 @@ export default function About() {
                     aria-valuenow="75"
                     aria-valuemin="0"
                     aria-valuemax="100"
+                    style={{width:'75%'}}
                   ></div>
                 </div>
               </div>
@@ -154,6 +157,7 @@ export default function About() {
                     aria-valuenow="80"
                     aria-valuemin="0"
                     aria-valuemax="100"
+                    style={{width:'80%'}}
                   ></div>
                 </div>
               </div>
@@ -169,6 +173,7 @@ export default function About() {
                     aria-valuenow="90"
                     aria-valuemin="0"
                     aria-valuemax="100"
+                    style={{width:'90%'}}
                   ></div>
                 </div>
               </div>
@@ -181,9 +186,10 @@ export default function About() {
                   <div
                     className="progress-bar"
                     role="progressbar"
-                    aria-valuenow="55"
+                    aria-valuenow="65"
                     aria-valuemin="0"
                     aria-valuemax="100"
+                    style={{width:'65%'}}
                   ></div>
                 </div>
               </div>
