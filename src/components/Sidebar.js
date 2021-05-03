@@ -2,37 +2,37 @@ import React from "react";
 import "../css/style.css";
 export default function Sidebar() {
   return (
-    <div id="header" class="d-flex flex-column justify-content-center">
-      <nav class="nav-menu">
+    <div id="header" className="d-flex flex-column justify-content-center">
+      <nav className="nav-menu">
         <ul>
-          <li class="active">
+          <li className="active">
             <a href="#hero">
-              <i class="bx bx-home"></i> <span>Home</span>
+              <i className="bx bx-home"></i> <span>Home</span>
             </a>
           </li>
           <li>
             <a href="#about">
-              <i class="bx bx-user"></i> <span>About</span>
+              <i className="bx bx-user"></i> <span>About</span>
             </a>
           </li>
           <li>
             <a href="#resume">
-              <i class="bx bx-file-blank"></i> <span>Resume</span>
+              <i className="bx bx-file-blank"></i> <span>Resume</span>
             </a>
           </li>
           <li>
             <a href="#portfolio">
-              <i class="bx bx-book-content"></i> <span>Portfolio</span>
+              <i className="bx bx-book-content"></i> <span>Portfolio</span>
             </a>
           </li>
           <li>
             <a href="#services">
-              <i class="bx bx-server"></i> <span>Services</span>
+              <i className="bx bx-server"></i> <span>Services</span>
             </a>
           </li>
           <li>
             <a href="#contact">
-              <i class="bx bx-envelope"></i> <span>Contact</span>
+              <i className="bx bx-envelope"></i> <span>Contact</span>
             </a>
           </li>
         </ul>
