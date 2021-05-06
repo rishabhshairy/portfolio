@@ -3,7 +3,7 @@ import "../css/style.css";
 import profileImage from "../img/profile-img.jpg";
 export default function About() {
   return (
-    <div style={{ marginTop: "30px" }}>
+    <div style={{ margin: "60px 0" }}>
       <div id="about" className="about">
         <div className="container" data-aos="fade-up">
           <div className="section-title">
@@ -82,7 +82,7 @@ export default function About() {
         </div>
       </div>
       {/* Skills Section */}
-      <div id="skills" className="skills section-bg" style={{marginTop:"30px"}}>
+      <div id="skills" className="skills section-bg" style={{margin:"60px 0"}}>
         <div className="container" data-aos="fade-up">
           <div className="section-title">
             <h2>Skills</h2>
