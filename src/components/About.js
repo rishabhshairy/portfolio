@@ -8,12 +8,6 @@ export default function About() {
         <div className="container" data-aos="fade-up">
           <div className="section-title">
             <h2>About</h2>
-            <p>
-              Magnam dolores commodi suscipit. Necessitatibus eius consequatur
-              ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
-              quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
-              Quia fugiat sit in iste officiis commodi quidem hic quas.
-            </p>
           </div>
 
           <div className="row">
@@ -21,29 +15,21 @@ export default function About() {
               <img src={profileImage} className="img-fluid" alt="" />
             </div>
             <div className="col-lg-8 pt-4 pt-lg-0 content">
-              <h3>UI/UX Designer &amp; Web Developer.</h3>
-              <p className="font-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
+              <h3>Full Stack Web Developer.</h3>
               <div className="row">
                 <div className="col-lg-6">
                   <ul>
                     <li>
                       <i className="icofont-rounded-right"></i>{" "}
-                      <strong>Birthday:</strong> 1 May 1995
+                      <strong>Date Of Birth:</strong> 29 May 1996
                     </li>
                     <li>
                       <i className="icofont-rounded-right"></i>{" "}
-                      <strong>Website:</strong> www.example.com
+                      <strong>City:</strong> Bengaluru, Karnataka
                     </li>
                     <li>
                       <i className="icofont-rounded-right"></i>{" "}
-                      <strong>Phone:</strong> +123 456 7890
-                    </li>
-                    <li>
-                      <i className="icofont-rounded-right"></i>{" "}
-                      <strong>City:</strong> City : New York, USA
+                      <strong>Email:</strong> rishabhshairy29@gmail.com
                     </li>
                   </ul>
                 </div>
@@ -51,54 +37,46 @@ export default function About() {
                   <ul>
                     <li>
                       <i className="icofont-rounded-right"></i>{" "}
-                      <strong>Age:</strong> 30
+                      <strong>Age:</strong> 24
                     </li>
                     <li>
                       <i className="icofont-rounded-right"></i>{" "}
-                      <strong>Degree:</strong> Master
-                    </li>
-                    <li>
-                      <i className="icofont-rounded-right"></i>{" "}
-                      <strong>PhEmailone:</strong> email@example.com
-                    </li>
-                    <li>
-                      <i className="icofont-rounded-right"></i>{" "}
-                      <strong>Freelance:</strong> Available
+                      <strong>Degree:</strong> B.Tech
                     </li>
                   </ul>
                 </div>
               </div>
               <p>
-                Officiis eligendi itaque labore et dolorum mollitia officiis
-                optio vero. Quisquam sunt adipisci omnis et ut. Nulla
-                accusantium dolor incidunt officia tempore. Et eius omnis.
-                Cupiditate ut dicta maxime officiis quidem quia. Sed et
-                consectetur qui quia repellendus itaque neque. Aliquid amet
-                quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis
-                culpa magni laudantium dolores.
+                Software Engineer with over 1.5 years of experience. Achievement
+                Driven and eager to contribute to success through challenging
+                tasks, hard work and dedication. Skilled in technical aspects
+                like coding of modules using the given design specifications,
+                debugging and fixing the defects as well as analysing the root
+                cause of the same.Rich exposure in the Software Development
+                Lifecycle (SDLC) right from requirement analysis, documentation
+                (functional specifications, technical design), coding and
+                debugging.
               </p>
             </div>
           </div>
         </div>
       </div>
       {/* Skills Section */}
-      <div id="skills" className="skills section-bg" style={{margin:"60px 0"}}>
+      <div
+        id="skills"
+        className="skills section-bg"
+        style={{ margin: "60px 0" }}
+      >
         <div className="container" data-aos="fade-up">
           <div className="section-title">
             <h2>Skills</h2>
-            <p>
-              Magnam dolores commodi suscipit. Necessitatibus eius consequatur
-              ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
-              quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
-              Quia fugiat sit in iste officiis commodi quidem hic quas.
-            </p>
           </div>
 
           <div className="row skills-content">
             <div className="col-lg-6">
               <div className="progress">
                 <span className="skill">
-                  JAVA <i className="val">100%</i>
+                  JAVA <i className="val">85%</i>
                 </span>
                 <div className="progress-bar-wrap">
                   <div
@@ -107,7 +85,23 @@ export default function About() {
                     aria-valuenow="100"
                     aria-valuemin="0"
                     aria-valuemax="100"
-                    style={{width:'100%'}}
+                    style={{ width: "85%" }}
+                  ></div>
+                </div>
+              </div>
+
+              <div className="progress">
+                <span className="skill">
+                  Spring Boot <i className="val">65%</i>
+                </span>
+                <div className="progress-bar-wrap">
+                  <div
+                    className="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="100"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style={{ width: "65%" }}
                   ></div>
                 </div>
               </div>
@@ -123,7 +117,7 @@ export default function About() {
                     aria-valuenow="90"
                     aria-valuemin="0"
                     aria-valuemax="100"
-                    style={{width:'90%'}}
+                    style={{ width: "90%" }}
                   ></div>
                 </div>
               </div>
@@ -139,7 +133,7 @@ export default function About() {
                     aria-valuenow="75"
                     aria-valuemin="0"
                     aria-valuemax="100"
-                    style={{width:'75%'}}
+                    style={{ width: "75%" }}
                   ></div>
                 </div>
               </div>
@@ -157,7 +151,7 @@ export default function About() {
                     aria-valuenow="80"
                     aria-valuemin="0"
                     aria-valuemax="100"
-                    style={{width:'80%'}}
+                    style={{ width: "80%" }}
                   ></div>
                 </div>
               </div>
@@ -173,23 +167,39 @@ export default function About() {
                     aria-valuenow="90"
                     aria-valuemin="0"
                     aria-valuemax="100"
-                    style={{width:'90%'}}
+                    style={{ width: "90%" }}
                   ></div>
                 </div>
               </div>
 
               <div className="progress">
                 <span className="skill">
-                  REACT <i className="val">55%</i>
+                  REACT JS <i className="val">55%</i>
                 </span>
                 <div className="progress-bar-wrap">
                   <div
                     className="progress-bar"
                     role="progressbar"
-                    aria-valuenow="65"
+                    aria-valuenow="55"
                     aria-valuemin="0"
                     aria-valuemax="100"
-                    style={{width:'65%'}}
+                    style={{ width: "55%" }}
+                  ></div>
+                </div>
+              </div>
+
+              <div className="progress">
+                <span className="skill">
+                  Python <i className="val">60%</i>
+                </span>
+                <div className="progress-bar-wrap">
+                  <div
+                    className="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="60"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style={{ width: "60%" }}
                   ></div>
                 </div>
               </div>
