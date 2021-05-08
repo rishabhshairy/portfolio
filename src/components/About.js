@@ -2,9 +2,18 @@ import React from "react";
 import "../css/style.css";
 import profileImage from "../img/profile-img.jpg";
 export default function About() {
+  const about = `Software Engineer with over 1.5 years of experience. Achievement
+  Driven and eager to contribute to success through challenging
+  tasks, hard work and dedication. Skilled in technical aspects
+  like coding of modules using the given design specifications,
+  debugging and fixing the defects as well as analysing the root
+  cause of the same.Rich exposure in the Software Development
+  Lifecycle (SDLC) right from requirement analysis, documentation
+  (functional specifications, technical design), coding and
+  debugging.`;
   return (
-    <div style={{ margin: "60px 0" }}>
-      <div id="about" className="about">
+    <div>
+      <div id="about" className="about" style={{ padding: "60px 0" }}>
         <div className="container" data-aos="fade-up">
           <div className="section-title">
             <h2>About</h2>
@@ -46,17 +55,7 @@ export default function About() {
                   </ul>
                 </div>
               </div>
-              <p>
-                Software Engineer with over 1.5 years of experience. Achievement
-                Driven and eager to contribute to success through challenging
-                tasks, hard work and dedication. Skilled in technical aspects
-                like coding of modules using the given design specifications,
-                debugging and fixing the defects as well as analysing the root
-                cause of the same.Rich exposure in the Software Development
-                Lifecycle (SDLC) right from requirement analysis, documentation
-                (functional specifications, technical design), coding and
-                debugging.
-              </p>
+              <p>{about}</p>
             </div>
           </div>
         </div>
@@ -65,7 +64,7 @@ export default function About() {
       <div
         id="skills"
         className="skills section-bg"
-        style={{ margin: "60px 0" }}
+        style={{ padding: "40px 0" }}
       >
         <div className="container" data-aos="fade-up">
           <div className="section-title">

@@ -692,6 +692,7 @@ section {
 # Services
 --------------------------------------------------------------*/
 .services .icon-box {
+  width: 100%;
   text-align: center;
   padding: 70px 20px 80px 20px;
   transition: all ease-in-out 0.3s;
@@ -795,6 +796,18 @@ section {
 
 .services .iconbox-yellow:hover .icon path {
   fill: #ffbb2c;
+}
+
+.services .iconbox-green i {
+  color: #80ea6e;
+}
+
+.services .iconbox-green:hover .icon i {
+  color: #fff;
+}
+
+.services .iconbox-green:hover .icon path {
+  fill: #80ea6e;
 }
 
 .services .iconbox-red i {
