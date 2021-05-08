@@ -2,7 +2,7 @@ import React from "react";
 import "../css/style.css";
 export default function Certs() {
   return (
-    <div id="services" className="services" style={{margin:"60px 0"}}>
+    <div id="services" className="services" style={{ margin: "60px 0" }}>
       <div className="container" data-aos="fade-up">
         <div className="section-title">
           <h2>Certifications</h2>
@@ -38,7 +38,7 @@ export default function Certs() {
                 <i className="bx bxl-dribbble"></i>
               </div>
               <h4>
-                <a href="">Lorem Ipsum</a>
+                <p>Lorem Ipsum</p>
               </h4>
               <p>
                 Voluptatum deleniti atque corrupti quos dolores et quas
@@ -70,7 +70,7 @@ export default function Certs() {
                 <i className="bx bx-file"></i>
               </div>
               <h4>
-                <a href="">Sed Perspiciatis</a>
+                <p>Sed Perspiciatis</p>
               </h4>
               <p>
                 Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -102,7 +102,7 @@ export default function Certs() {
                 <i className="bx bx-tachometer"></i>
               </div>
               <h4>
-                <a href="">Magni Dolores</a>
+                <p>Magni Dolores</p>
               </h4>
               <p>
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa
@@ -134,7 +134,7 @@ export default function Certs() {
                 <i className="bx bx-layer"></i>
               </div>
               <h4>
-                <a href="">Nemo Enim</a>
+                <p>Nemo Enim</p>
               </h4>
               <p>
                 At vero eos et accusamus et iusto odio dignissimos ducimus qui
@@ -166,7 +166,7 @@ export default function Certs() {
                 <i className="bx bx-slideshow"></i>
               </div>
               <h4>
-                <a href="">Dele Cardo</a>
+                <p>Dele Cardo</p>
               </h4>
               <p>
                 Quis consequatur saepe eligendi voluptatem consequatur dolor
@@ -195,10 +195,10 @@ export default function Certs() {
                     d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762"
                   ></path>
                 </svg>
-                <i className="bx bx-arch"></i>
+                <i className="bx bx-cloud"></i>
               </div>
               <h4>
-                <a href="">Divera Don</a>
+                <p>Divera Don</p>
               </h4>
               <p>
                 Modi nostrum vel laborum. Porro fugit error sit minus sapiente
