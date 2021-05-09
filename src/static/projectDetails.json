@@ -1,0 +1,25 @@
+{
+  "projectDetails": [
+    {
+      "id": 1,
+      "projectName": "Apple Online Store",
+      "year": "April 2020 - Present",
+      "role": "Publishing System Engineer",
+      "image": "eCommProject"
+    },
+    {
+      "id": 2,
+      "projectName": "Wanderlust",
+      "year": "January 2020 - March 2020",
+      "role": "System Engineer Trainee",
+      "image": "wanderlust"
+    },
+    {
+      "id": 3,
+      "projectName": "AI Platform",
+      "year": "March 2019 - October 2019",
+      "role": "Full Stack Developer Intern",
+      "image": "fullStackProj"
+    }
+  ]
+}
