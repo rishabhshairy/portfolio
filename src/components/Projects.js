@@ -1,28 +1,58 @@
-import React from "react";
-import portfolio1 from "../img/portfolio/eCommProject.jpg";
+import React, { useState } from "react";
+import eCommProject from "../img/portfolio/eCommProject.jpg";
 import wanderlust from "../img/portfolio/portfolio-7.jpg";
 import fullStackProj from "../img/portfolio/fullStackProj.jpg";
+import Modal from "react-bootstrap/Modal";
+import data from "../static/projectDetails.json";
+
+function ProjectModal(props) {
+  const project = props.project;
+  return (
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          {project.projectName}
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <h4>Centered Modal</h4>
+        <p>
+          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
+          consectetur ac, vestibulum at eros.
+        </p>
+      </Modal.Body>
+    </Modal>
+  );
+}
 export default function Projects() {
+  const [modalShow, setModalShow] = useState({});
+  const projectDetails = data.projectDetails;
   return (
     <div
       id="portfolio"
-      class="portfolio section-bg"
-      style={{ padding: "60px 0" }}
+      className="portfolio section-bg"
+      style={{ padding: "60px 0", bottom: "40px" }}
     >
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
+      <div className="container" data-aos="fade-up">
+        <div className="section-title">
           <h2>Projects</h2>
           <p>Completed these projects during my professional experience.</p>
         </div>
-
-        <div class="row">
+        {/* Project Selection Options */}
+        <div className="row">
           <div
-            class="col-lg-12 d-flex justify-content-center"
+            className="col-lg-12 d-flex justify-content-center"
             data-aos="fade-up"
             data-aos-delay="100"
           >
             <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">
+              <li data-filter="*" className="filter-active">
                 All
               </li>
               {/* <li data-filter=".filter-app">App</li>
@@ -33,99 +63,56 @@ export default function Projects() {
         </div>
 
         <div
-          class="row portfolio-container"
+          className="row portfolio-container"
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          {/* Project 1 */}
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src={portfolio1} class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h2>Apple Online Store</h2>
-                <p>Publishing System Engineer</p>
-                <div class="portfolio-links">
-                  <a
-                    href={portfolio1}
-                    data-gall="portfolioGallery"
-                    class="venobox"
-                    title="App 1"
-                  >
-                    <i class="bx bx-plus"></i>
-                  </a>
-                  <a
-                    href="portfolio-details.html"
-                    data-gall="portfolioDetailsGallery"
-                    data-vbtype="iframe"
-                    class="venobox"
-                    title="Portfolio Details"
-                  >
-                    <i class="bx bx-link"></i>
-                  </a>
+          {projectDetails.map((proj) => {
+            return (
+              <div
+                className="col-lg-4 col-md-6 portfolio-item filter-app"
+                key={proj.id}
+              >
+                <div className="portfolio-wrap">
+                  <img
+                    className="img-fluid"
+                    alt=""
+                    src={
+                      proj.image === "eCommProject"
+                        ? eCommProject
+                        : proj.image === "wanderlust"
+                        ? wanderlust
+                        : fullStackProj
+                    }
+                  />
+                  <div className="portfolio-info">
+                    <h2>{proj.projectName}</h2>
+                    <p>{proj.role}</p>
+                    <div className="portfolio-links">
+                      <br></br>
+                      <button
+                        onClick={() =>
+                          setModalShow({ ["show_" + proj.id]: true })
+                        }
+                      >
+                        <i className="bx bx-link"></i>
+                      </button>
+                      <ProjectModal
+                        show={modalShow["show_" + proj.id]}
+                        onHide={() =>
+                          setModalShow({ ["show_" + proj.id]: false })
+                        }
+                        project={proj}
+                      ></ProjectModal>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          {/* Project 2 */}
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src={wanderlust} class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h4>Wanderlust</h4>
-                <p>System Engineer Trainee</p>
-                <div class="portfolio-links">
-                  <a
-                    href={wanderlust}
-                    data-gall="portfolioGallery"
-                    class="venobox"
-                    title="Web 3"
-                  >
-                    <i class="bx bx-plus"></i>
-                  </a>
-                  <a
-                    href="portfolio-details.html"
-                    data-gall="portfolioDetailsGallery"
-                    data-vbtype="iframe"
-                    class="venobox"
-                    title="Portfolio Details"
-                  >
-                    <i class="bx bx-link"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Project 3 */}
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src={fullStackProj} class="img-fluid" alt="" />
-              <div class="portfolio-info">
-                <h4>AI Automation Platform</h4>
-                <p>Full Stack Developer Intern</p>
-                <div class="portfolio-links">
-                  <a
-                    href={fullStackProj}
-                    data-gall="portfolioGallery"
-                    class="venobox"
-                    title="App 2"
-                  >
-                    <i class="bx bx-plus"></i>
-                  </a>
-                  <a
-                    href="portfolio-details.html"
-                    data-gall="portfolioDetailsGallery"
-                    data-vbtype="iframe"
-                    class="venobox"
-                    title="Portfolio Details"
-                  >
-                    <i class="bx bx-link"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
+
+        <div className="row" style={{ height: "400px" }}></div>
       </div>
     </div>
   );
