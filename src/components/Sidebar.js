@@ -20,11 +20,11 @@ export default function Sidebar() {
               <i className="bx bx-file-blank"></i> <span>Resume</span>
             </a>
           </li>
-          {/* <li>
+          <li>
             <a href="#portfolio">
-              <i className="bx bx-book-content"></i> <span>Portfolio</span>
+              <i className="bx bx-book-content"></i> <span>Projects</span>
             </a>
-          </li> */}
+          </li>
           <li>
             <a href="#services">
               <i className="bx bx-server"></i> <span>Certifications</span>
