@@ -3,6 +3,7 @@ import About from "./components/About";
 import Certs from "./components/Certs";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
+import Projects from "./components/Projects";
 import Resume from "./components/Resume";
 import Sidebar from "./components/Sidebar";
 import "./css/style.css";
@@ -18,6 +19,7 @@ function App() {
         <div id="main">
           <About></About>
           <Resume></Resume>
+          <Projects></Projects>
           <Certs></Certs>
         </div>
         <Footer></Footer>

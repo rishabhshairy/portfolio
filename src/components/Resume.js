@@ -37,19 +37,19 @@ export default function Resume() {
   ];
 
   const profExp = [
-    {
+    { id: 1,
       role: `System Engineer`,
       year: `April 2020 - Present`,
       company: `Infosys Ltd`,
       location: `Bengaluru, Karnataka`,
     },
-    {
+    { id: 2,
       role: `System Engineer Trainee`,
       year: `November 2019 - March 2020`,
       company: `Infosys Ltd`,
       location: `Mysore, Karnataka`,
     },
-    {
+    { id: 3,
       role: `Full Stack Developer Intern`,
       year: `March 2019 - October 2019`,
       company: `Thinking Stack Inc`,
@@ -96,7 +96,7 @@ export default function Resume() {
             <h3 className="resume-title">Professional Experience</h3>
             {profExp.map((exp) => {
               return (
-                <div className="resume-item">
+                <div className="resume-item" key={exp.id}>
                   <h4>{exp.role}</h4>
                   <h5>{exp.year}</h5>
                   <p style={{ fontWeight: "bold" }}>{exp.company}</p>
