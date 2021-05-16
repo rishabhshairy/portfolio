@@ -3,7 +3,7 @@ import "../css/style.css";
 export default function Hero() {
   return (
     <div>
-      <div id="hero" className="d-flex flex-column justify-content-center" style={{margin:"60px 0"}}>
+      <div id="hero" className="d-flex flex-column justify-content-center">
         <div className="container" data-aos="zoom-in" data-aos-delay="100">
           <h1>Rishabh Shairy</h1>
           <p>I'm Software Engineer</p>

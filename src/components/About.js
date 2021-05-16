@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/style.css";
-import profileImage from "../img/profile-img.jpg";
+import profileImage from "../img/profile-pic.jpg";
 export default function About() {
   const about = `Software Engineer with over 1.5 years of experience. Achievement
   Driven and eager to contribute to success through challenging
@@ -65,7 +65,7 @@ export default function About() {
       <div
         id="skills"
         className="skills section-bg"
-        style={{ padding: "20px 0" }}
+        style={{ padding: "5px 0" }}
       >
         <div className="container" data-aos="fade-up">
           <div className="section-title">
