@@ -4,6 +4,7 @@ import wanderlust from "../img/portfolio/portfolio-7.jpg";
 import fullStackProj from "../img/portfolio/fullStackProj.jpg";
 import Modal from "react-bootstrap/Modal";
 import { projectData } from "../static/projectDetails";
+import "../css/style.css";
 
 function ProjectModal(props) {
   const project = props.project;
@@ -107,7 +108,8 @@ export default function Projects() {
                     <p>{proj.role}</p>
                     <div className="portfolio-links">
                       <br></br>
-                      <button className="btn btn-light justify-content-center"
+                      <button
+                        className="btn btn-light justify-content-center"
                         onClick={() =>
                           setModalShow({ ["show_" + proj.id]: true })
                         }
