@@ -3,7 +3,7 @@ import eCommProject from "../img/portfolio/eCommProject.jpg";
 import wanderlust from "../img/portfolio/portfolio-7.jpg";
 import fullStackProj from "../img/portfolio/fullStackProj.jpg";
 import Modal from "react-bootstrap/Modal";
-import data from "../static/projectDetails.json";
+import { projectData } from "../static/projectDetails";
 
 function ProjectModal(props) {
   const project = props.project;
@@ -20,19 +20,32 @@ function ProjectModal(props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>Centered Modal</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p>
+        <h3>{project.company}</h3>
+        <span style={{ color: "#BDBDBD" }}>
+          <h6>{project.year}</h6>{" "}
+        </span>
+        <p>{project.details.description}</p>
+        <ul>
+          {project.details.responsibilities.map((res) => {
+            return <li>{res}</li>;
+          })}
+        </ul>
+        {project.details.tech.map((tech) => {
+          return (
+            <p>
+              <span style={{ fontWeight: "bold" }}>{Object.keys(tech)}</span>
+              <span>{`: `}</span>
+              <span>{tech[Object.keys(tech)]}</span>
+            </p>
+          );
+        })}
       </Modal.Body>
     </Modal>
   );
 }
 export default function Projects() {
   const [modalShow, setModalShow] = useState({});
-  const projectDetails = data.projectDetails;
+  const projectDetails = projectData;
   return (
     <div
       id="portfolio"
@@ -86,16 +99,21 @@ export default function Projects() {
                     }
                   />
                   <div className="portfolio-info">
-                    <h2>{proj.projectName}</h2>
+                    <h2>
+                      {proj.projectName.length > 18
+                        ? proj.projectName.substring(0, 18)
+                        : proj.projectName}
+                    </h2>
                     <p>{proj.role}</p>
                     <div className="portfolio-links">
                       <br></br>
-                      <button
+                      <button className="btn btn-light justify-content-center"
                         onClick={() =>
                           setModalShow({ ["show_" + proj.id]: true })
                         }
                       >
-                        <i className="bx bx-link"></i>
+                        <i className="bx bx-show"></i>
+                        {` View Details`}
                       </button>
                       <ProjectModal
                         show={modalShow["show_" + proj.id]}
