@@ -25,6 +25,7 @@ export default function About() {
             </div>
             <div className="col-lg-8 pt-4 pt-lg-0 content">
               <h3>Full Stack Web Developer.</h3>
+              <p></p>
               <div className="row">
                 <div className="col-lg-6">
                   <ul>
@@ -64,7 +65,7 @@ export default function About() {
       <div
         id="skills"
         className="skills section-bg"
-        style={{ padding: "40px 0" }}
+        style={{ padding: "20px 0" }}
       >
         <div className="container" data-aos="fade-up">
           <div className="section-title">
