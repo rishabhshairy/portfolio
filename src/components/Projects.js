@@ -26,11 +26,15 @@ function ProjectModal(props) {
           <h6>{project.year}</h6>{" "}
         </span>
         <p>{project.details.description}</p>
-        <ul>
-          {project.details.responsibilities.map((res) => {
-            return <li>{res}</li>;
-          })}
-        </ul>
+        <p style={{ fontWeight: "bold" }}>Roles and Responsibilities</p>
+        <div>
+          <ul>
+            {project.details.responsibilities.map((res) => {
+              return <li>{res}</li>;
+            })}
+          </ul>
+        </div>
+
         {project.details.tech.map((tech) => {
           return (
             <p>
@@ -69,9 +73,6 @@ export default function Projects() {
               <li data-filter="*" className="filter-active">
                 All
               </li>
-              {/* <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li> */}
             </ul>
           </div>
         </div>
@@ -119,12 +120,13 @@ export default function Projects() {
                       </button>
                     </div>
                   </div>
-                  <ProjectModal
-                    show={modalShow["show_" + proj.id]}
-                    onHide={() => setModalShow({ ["show_" + proj.id]: false })}
-                    project={proj}
-                  ></ProjectModal>
                 </div>
+
+                <ProjectModal
+                  show={modalShow["show_" + proj.id]}
+                  onHide={() => setModalShow({ ["show_" + proj.id]: false })}
+                  project={proj}
+                ></ProjectModal>
               </div>
             );
           })}
