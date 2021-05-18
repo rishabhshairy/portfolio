@@ -27,7 +27,7 @@ function ProjectModal(props) {
         </span>
         <p>{project.details.description}</p>
         <p style={{ fontWeight: "bold" }}>Roles and Responsibilities</p>
-        <div>
+        <div style={{padding:"15px"}}>
           <ul>
             {project.details.responsibilities.map((res) => {
               return <li>{res}</li>;
@@ -48,6 +48,7 @@ function ProjectModal(props) {
     </Modal>
   );
 }
+
 export default function Projects() {
   const [modalShow, setModalShow] = useState({});
   const projectDetails = projectData;
@@ -84,44 +85,46 @@ export default function Projects() {
         >
           {projectDetails.map((proj) => {
             return (
-              <div
-                className="col-lg-4 col-md-6 portfolio-item filter-app"
-                key={proj.id}
-              >
-                <div className="portfolio-wrap">
-                  <img
-                    className="img-fluid"
-                    alt=""
-                    src={
-                      proj.image === "eCommProject"
-                        ? eCommProject
-                        : proj.image === "wanderlust"
-                        ? wanderlust
-                        : fullStackProj
-                    }
-                  />
-                  <div className="portfolio-info">
-                    <h2>
-                      {proj.projectName.length > 18
-                        ? proj.projectName.substring(0, 18)
-                        : proj.projectName}
-                    </h2>
-                    <p>{proj.role}</p>
-                    <div className="portfolio-links">
-                      <br></br>
-                      <button
-                        className="btn btn-light justify-content-center"
-                        onClick={() =>
-                          setModalShow({ ["show_" + proj.id]: true })
-                        }
-                      >
-                        <i className="bx bx-show"></i>
-                        {` View Details`}
-                      </button>
+              <div>
+                {" "}
+                <div
+                  className="col-lg-4 col-md-6 portfolio-item filter-app"
+                  key={proj.id}
+                >
+                  <div className="portfolio-wrap">
+                    <img
+                      className="img-fluid"
+                      alt=""
+                      src={
+                        proj.image === "eCommProject"
+                          ? eCommProject
+                          : proj.image === "wanderlust"
+                          ? wanderlust
+                          : fullStackProj
+                      }
+                    />
+                    <div className="portfolio-info">
+                      <h2>
+                        {proj.projectName.length > 18
+                          ? proj.projectName.substring(0, 18)
+                          : proj.projectName}
+                      </h2>
+                      <p>{proj.role}</p>
+                      <div className="portfolio-links">
+                        <br></br>
+                        <button
+                          className="btn btn-light justify-content-center"
+                          onClick={() =>
+                            setModalShow({ ["show_" + proj.id]: true })
+                          }
+                        >
+                          <i className="bx bx-show"></i>
+                          {` View Details`}
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
-
                 <ProjectModal
                   show={modalShow["show_" + proj.id]}
                   onHide={() => setModalShow({ ["show_" + proj.id]: false })}
