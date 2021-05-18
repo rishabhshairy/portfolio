@@ -53,7 +53,7 @@ export default function Projects() {
   const [modalShow, setModalShow] = useState({});
   const projectDetails = projectData;
   return (
-    <div id="portfolio" style={{ padding: "60px 0", bottom: "40px" }}>
+    <div id="portfolio" className="portfolio" style={{ padding: "60px 0"}}>
       <div className="section-title">
         <h2>Projects</h2>
         <p>Completed these projects during my professional experience.</p>
