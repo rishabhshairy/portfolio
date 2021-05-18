@@ -117,15 +117,13 @@ export default function Projects() {
                         <i className="bx bx-show"></i>
                         {` View Details`}
                       </button>
-                      <ProjectModal
-                        show={modalShow["show_" + proj.id]}
-                        onHide={() =>
-                          setModalShow({ ["show_" + proj.id]: false })
-                        }
-                        project={proj}
-                      ></ProjectModal>
                     </div>
                   </div>
+                  <ProjectModal
+                    show={modalShow["show_" + proj.id]}
+                    onHide={() => setModalShow({ ["show_" + proj.id]: false })}
+                    project={proj}
+                  ></ProjectModal>
                 </div>
               </div>
             );
