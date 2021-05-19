@@ -49,9 +49,22 @@ export const projectData = [
     company: "Thinking Stack Inc",
     image: "fullStackProj",
     details: {
-      description: "",
-      responsibilities: [],
-      tech: [],
+      description: "AI platform",
+      responsibilities: [
+        "Developing User Interfaces using Angular, HTML, CSS",
+        "Investigating and resolving issues for the web application and providing end-user support",
+        "Studying & analyzing basic project requirements with assigned technical lead and planning development strategy",
+        "Learning about various NPM packages for project usability"
+      ],
+      tech: [        {
+        Backend: "Java, Spring-Boot",
+      },
+      {
+        FrontEnd: "Angular, HTML, CSS, Flex Layout, Typescript",
+      },
+      {
+        Database: "Mongo DB",
+      },],
     },
   },
 ];

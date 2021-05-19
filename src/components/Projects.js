@@ -27,7 +27,7 @@ function ProjectModal(props) {
         </span>
         <p>{project.details.description}</p>
         <p style={{ fontWeight: "bold" }}>Roles and Responsibilities</p>
-        <div style={{padding:"15px"}}>
+        <div style={{ padding: "15px" }}>
           <ul>
             {project.details.responsibilities.map((res) => {
               return <li>{res}</li>;
@@ -53,89 +53,90 @@ export default function Projects() {
   const [modalShow, setModalShow] = useState({});
   const projectDetails = projectData;
   return (
-    <div
-      id="portfolio"
-      className="portfolio section-bg"
-      style={{ padding: "60px 0", bottom: "40px" }}
-    >
-      <div className="container" data-aos="fade-up">
-        <div className="section-title">
-          <h2>Projects</h2>
-          <p>Completed these projects during my professional experience.</p>
-        </div>
-        {/* Project Selection Options */}
-        <div className="row">
-          <div
-            className="col-lg-12 d-flex justify-content-center"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <ul id="portfolio-flters">
-              <li data-filter="*" className="filter-active">
-                All
-              </li>
-            </ul>
-          </div>
-        </div>
-
+    <div id="portfolio" className="portfolio" style={{ padding: "60px 0"}}>
+      <div className="section-title">
+        <h2>Projects</h2>
+        <p>Completed these projects during my professional experience.</p>
+      </div>
+      <div className="container">
         <div
-          className="row portfolio-container"
-          data-aos="fade-up"
-          data-aos-delay="200"
+          id="projectCarousel"
+          className="carousel slide"
+          data-ride="carousel"
         >
-          {projectDetails.map((proj) => {
-            return (
-              <div>
-                {" "}
+          <div className="carousel-inner">
+            {projectDetails.map((proj) => {
+              return (
                 <div
-                  className="col-lg-4 col-md-6 portfolio-item filter-app"
+                  className={
+                    proj.id === 1 ? "carousel-item active" : "carousel-item"
+                  }
                   key={proj.id}
                 >
-                  <div className="portfolio-wrap">
-                    <img
-                      className="img-fluid"
-                      alt=""
-                      src={
-                        proj.image === "eCommProject"
-                          ? eCommProject
-                          : proj.image === "wanderlust"
-                          ? wanderlust
-                          : fullStackProj
+                  <img
+                    className="d-block w-100 img-fluid"
+                    src={
+                      proj.image === "eCommProject"
+                        ? eCommProject
+                        : proj.image === "wanderlust"
+                        ? wanderlust
+                        : fullStackProj
+                    }
+                    alt="slide"
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h1>
+                      {proj.projectName.length > 18
+                        ? proj.projectName.substring(0, 18)
+                        : proj.projectName}
+                    </h1>
+                    <p>{proj.role}</p>
+                    <button
+                      className="btn btn-light justify-content-center"
+                      onClick={() =>
+                        setModalShow({ ["show_" + proj.id]: true })
                       }
-                    />
-                    <div className="portfolio-info">
-                      <h2>
-                        {proj.projectName.length > 18
-                          ? proj.projectName.substring(0, 18)
-                          : proj.projectName}
-                      </h2>
-                      <p>{proj.role}</p>
-                      <div className="portfolio-links">
-                        <br></br>
-                        <button
-                          className="btn btn-light justify-content-center"
-                          onClick={() =>
-                            setModalShow({ ["show_" + proj.id]: true })
-                          }
-                        >
-                          <i className="bx bx-show"></i>
-                          {` View Details`}
-                        </button>
-                      </div>
-                    </div>
+                    >
+                      <i className="bx bx-show"></i>
+                      {` View Details`}
+                    </button>
+                    <ProjectModal
+                      show={modalShow["show_" + proj.id]}
+                      onHide={() =>
+                        setModalShow({ ["show_" + proj.id]: false })
+                      }
+                      project={proj}
+                    ></ProjectModal>
                   </div>
                 </div>
-                <ProjectModal
-                  show={modalShow["show_" + proj.id]}
-                  onHide={() => setModalShow({ ["show_" + proj.id]: false })}
-                  project={proj}
-                ></ProjectModal>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
+          <a
+            className="carousel-control-prev center"
+            href="#projectCarousel"
+            role="button"
+            data-slide="prev"
+          >
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="sr-only">Previous</span>
+          </a>
+          <a
+            className="carousel-control-next center"
+            href="#projectCarousel"
+            role="button"
+            data-slide="next"
+          >
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="sr-only">Next</span>
+          </a>
         </div>
-
-        <div className="row" style={{ height: "400px" }}></div>
       </div>
     </div>
   );

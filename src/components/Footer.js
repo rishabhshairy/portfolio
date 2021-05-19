@@ -7,25 +7,25 @@ export default function Footer() {
         <div className="container">
           <h3>Rishabh Shairy</h3>
           <a href="mailto:rishabhshairy29@gmail.com">
-          rishabhshairy29@gmail.com
+            rishabhshairy29@gmail.com
           </a>
-          <p></p>
           <div className="social-links">
             <a href="https://github.com/rishabhshairy" className="github">
               <i className="bx bxl-github"></i>
             </a>
-            {/* <a href="#" className="facebook">
-              <i className="bx bxl-facebook"></i>
-            </a> */}
-            {/* <a href="#" className="instagram">
-              <i className="bx bxl-instagram"></i>
-            </a> */}
-            {/* <a href="#" className="google-plus">
-              <i className="bx bxl-skype"></i>
-            </a> */}
-            <a href="https://www.linkedin.com/in/rishabhshairy/" className="linkedin">
+            <a
+              href="https://www.linkedin.com/in/rishabhshairy/"
+              className="linkedin"
+            >
               <i className="bx bxl-linkedin"></i>
             </a>
+            <p className="justify-content-center"> 
+              Hosted on GitHub Pages with{" "}
+              <span
+                className="bx bxs-heart"
+                style={{ color: "red", fontSize:"22px",marginTop:"4px" }}
+              ></span>
+            </p>
           </div>
           <div className="copyright">
             &copy; Copyright{" "}
