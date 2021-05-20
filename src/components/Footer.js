@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <div id="footer">
       <footer id="footer">
-        <div className="container">
+        <div className="container container-small">
           <h3>Rishabh Shairy</h3>
           <a href="mailto:rishabhshairy29@gmail.com">
             rishabhshairy29@gmail.com

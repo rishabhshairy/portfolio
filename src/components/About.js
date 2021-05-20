@@ -14,7 +14,7 @@ export default function About() {
   return (
     <div>
       <div id="about" className="about" style={{ padding: "60px 0" }}>
-        <div className="container" data-aos="fade-up">
+        <div className="container container-small" data-aos="fade-up">
           <div className="section-title">
             <h2>About</h2>
           </div>
@@ -66,7 +66,7 @@ export default function About() {
         className="skills section-bg"
         style={{ padding: "5px 0" }}
       >
-        <div className="container" data-aos="fade-up">
+        <div className="container container-small" data-aos="fade-up">
           <div className="section-title">
             <h2>Skills</h2>
           </div>

@@ -3,7 +3,7 @@ import "../css/style.css";
 export default function Certs() {
   return (
     <div id="services" className="services" style={{ padding: "60px 0" }}>
-      <div className="container" data-aos="fade-up">
+      <div className="container container-small" data-aos="fade-up">
         <div className="section-title">
           <h2>Certifications</h2>
         </div>
