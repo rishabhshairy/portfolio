@@ -53,7 +53,7 @@ export default function Projects() {
   const [modalShow, setModalShow] = useState({});
   const projectDetails = projectData;
   return (
-    <div id="portfolio" className="portfolio" style={{ padding: "60px 0"}}>
+    <div id="portfolio" className="portfolio" style={{ padding: "60px 0" }}>
       <div className="section-title">
         <h2>Projects</h2>
         <p>Completed these projects during my professional experience.</p>
@@ -84,13 +84,25 @@ export default function Projects() {
                     }
                     alt="slide"
                   />
-                  <div class="carousel-caption d-none d-md-block">
+                  <div className="carousel-caption d-none d-md-block d-sm-block">
                     <h1>
                       {proj.projectName.length > 18
                         ? proj.projectName.substring(0, 18)
                         : proj.projectName}
                     </h1>
                     <p>{proj.role}</p>
+                    <button
+                      className="btn btn-light justify-content-center"
+                      onClick={() =>
+                        setModalShow({ ["show_" + proj.id]: true })
+                      }
+                    >
+                      <i className="bx bx-show"></i>
+                      {` View Details`}
+                    </button>
+                  </div>
+                  <div className="carousel-caption d-sm-block">
+                    {" "}
                     <button
                       className="btn btn-light justify-content-center"
                       onClick={() =>
