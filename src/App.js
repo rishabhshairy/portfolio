@@ -14,7 +14,7 @@ function App() {
       <div className="container-wrap">
         <Sidebar></Sidebar>
       </div>
-      <div className="container-fluid">
+      <div className="container-fluid p-0 container-small">
         <Hero></Hero>
         <div id="main">
           <About></About>
