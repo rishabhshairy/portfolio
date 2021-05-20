@@ -19,7 +19,7 @@ export default function About() {
             <h2>About</h2>
           </div>
 
-          <div className="row">
+          <div className="row about">
             <div className="col-lg-4">
               <img src={profileImage} className="img-fluid" alt="" />
             </div>
