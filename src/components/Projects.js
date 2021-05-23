@@ -27,7 +27,7 @@ function ProjectModal(props) {
         </span>
         <p>{project.details.description}</p>
         <p style={{ fontWeight: "bold" }}>Roles and Responsibilities</p>
-        <div style={{ padding: "15px" }}>
+        <div>
           <ul>
             {project.details.responsibilities.map((res) => {
               return <li>{res}</li>;
