@@ -2,7 +2,7 @@ import React from "react";
 import "../css/style.css";
 export default function Hero() {
   return (
-    <div id="hero" className="d-flex flex-column justify-content-center img-fluid">
+    <section id="hero" className="d-flex flex-column justify-content-center img-fluid" data-section="hero">
       <div className="container" data-aos="zoom-in" data-aos-delay="100">
         <h1>Rishabh Shairy</h1>
         <p>I'm a Software Engineer</p>
@@ -26,6 +26,6 @@ export default function Hero() {
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

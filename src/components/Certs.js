@@ -2,7 +2,7 @@ import React from "react";
 import "../css/style.css";
 export default function Certs() {
   return (
-    <div id="services" className="services" style={{ padding: "60px 0" }}>
+    <section id="services" className="services" style={{ padding: "60px 0" }}>
       <div className="container container-small" data-aos="fade-up">
         <div className="section-title">
           <h2>Certifications</h2>
@@ -114,6 +114,6 @@ export default function Certs() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

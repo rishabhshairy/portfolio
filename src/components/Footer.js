@@ -2,7 +2,6 @@ import React from "react";
 import "../css/style.css";
 export default function Footer() {
   return (
-    <div id="footer">
       <footer id="footer">
         <div className="container container-small">
           <h3>Rishabh Shairy</h3>
@@ -39,6 +38,5 @@ export default function Footer() {
           </div>
         </div>
       </footer>
-    </div>
   );
 }

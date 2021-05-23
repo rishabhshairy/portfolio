@@ -27,10 +27,10 @@ function ProjectModal(props) {
         </span>
         <p>{project.details.description}</p>
         <p style={{ fontWeight: "bold" }}>Roles and Responsibilities</p>
-        <div style={{ padding: "15px" }}>
+        <div>
           <ul>
             {project.details.responsibilities.map((res) => {
-              return <li>{res}</li>;
+              return <li key={res}>{res}</li>;
             })}
           </ul>
         </div>
@@ -53,7 +53,7 @@ export default function Projects() {
   const [modalShow, setModalShow] = useState({});
   const projectDetails = projectData;
   return (
-    <div id="portfolio" className="portfolio" style={{ padding: "60px 0" }}>
+    <section id="portfolio" className="portfolio" style={{ padding: "60px 0" }}>
       <div className="section-title">
         <h2>Projects</h2>
         <p>Completed these projects during my professional experience.</p>
@@ -118,6 +118,7 @@ export default function Projects() {
                         setModalShow({ ["show_" + proj.id]: false })
                       }
                       project={proj}
+                      key={proj.id}
                     ></ProjectModal>
                   </div>
                 </div>
@@ -150,6 +151,6 @@ export default function Projects() {
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

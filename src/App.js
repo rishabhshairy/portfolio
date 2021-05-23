@@ -16,12 +16,12 @@ function App() {
       </div>
       <div className="p-0 container-small">
         <Hero></Hero>
-        <div id="main container-fluid">
+        <main id="main container-fluid">
           <About></About>
           <Resume></Resume>
           <Projects></Projects>
           <Certs></Certs>
-        </div>
+        </main>
         <Footer></Footer>
       </div>
     </div>
