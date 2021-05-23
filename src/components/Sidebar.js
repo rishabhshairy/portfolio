@@ -27,7 +27,8 @@ export default function Sidebar() {
           </li>
           <li>
             <a href="#services">
-              <i className="bx bx-certification"></i> <span>Certifications</span>
+              <i className="bx bx-certification"></i>{" "}
+              <span>Certifications</span>
             </a>
           </li>
           <li>
