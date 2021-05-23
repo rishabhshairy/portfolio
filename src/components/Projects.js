@@ -30,7 +30,7 @@ function ProjectModal(props) {
         <div>
           <ul>
             {project.details.responsibilities.map((res) => {
-              return <li>{res}</li>;
+              return <li key={res}>{res}</li>;
             })}
           </ul>
         </div>
@@ -118,6 +118,7 @@ export default function Projects() {
                         setModalShow({ ["show_" + proj.id]: false })
                       }
                       project={proj}
+                      key={proj.id}
                     ></ProjectModal>
                   </div>
                 </div>
