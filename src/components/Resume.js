@@ -58,7 +58,7 @@ export default function Resume() {
   ];
 
   return (
-    <div id="resume" className="resume" style={{ padding: "60px 0" }}>
+    <section id="resume" className="resume" style={{ padding: "60px 0" }}>
       <div className="container" data-aos="fade-up">
         <div className="section-title">
           <h2>Resume</h2>
@@ -110,6 +110,6 @@ export default function Resume() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -2,8 +2,8 @@ import React from "react";
 import "../css/style.css";
 export default function Sidebar() {
   return (
-    <div id="header" className="d-flex flex-column justify-content-center">
-      <nav className="nav-menu">
+    <header id="header" className="d-flex flex-column justify-content-center">
+      <nav className="nav-menu" role="navigation">
         <ul>
           <li className="active">
             <a href="#hero">
@@ -27,7 +27,7 @@ export default function Sidebar() {
           </li>
           <li>
             <a href="#services">
-              <i className="bx bx-server"></i> <span>Certifications</span>
+              <i className="bx bx-certification"></i> <span>Certifications</span>
             </a>
           </li>
           <li>
@@ -37,6 +37,6 @@ export default function Sidebar() {
           </li>
         </ul>
       </nav>
-    </div>
+    </header>
   );
 }
