@@ -29,6 +29,7 @@ export const profExp = [
     year: `April 2020 - Present`,
     company: `Infosys Ltd`,
     location: `Bengaluru, Karnataka`,
+    details: [],
   },
   {
     id: 2,
@@ -36,6 +37,11 @@ export const profExp = [
     year: `November 2019 - March 2020`,
     company: `Infosys Ltd`,
     location: `Mysore, Karnataka`,
+    details: [
+      "Developed a Full Stack web-application as part of final project",
+      "Completed Training on Java, Spring Boot and React",
+      "Completed Training on Python and MySQL",
+    ],
   },
   {
     id: 3,
@@ -43,6 +49,7 @@ export const profExp = [
     year: `March 2019 - October 2019`,
     company: `Thinking Stack Inc`,
     location: `Bengaluru, Karnataka`,
+    details: [],
   },
 ];
 
