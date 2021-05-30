@@ -29,7 +29,12 @@ export const profExp = [
     year: `April 2020 - Present`,
     company: `Infosys Ltd`,
     location: `Bengaluru, Karnataka`,
-    details: [],
+    details: [
+      "Experience of working in Agile-driven environment, and effectively maintaining project timelines.",
+      "Collaborating with cross-functional development team members to provide prospective fix.",
+      "Implemented solutions to fix system bugs and software enhancement for the requirements.",
+      "Improved previously developed User Interfaces using latest technologies."
+    ],
   },
   {
     id: 2,
@@ -38,9 +43,9 @@ export const profExp = [
     company: `Infosys Ltd`,
     location: `Mysore, Karnataka`,
     details: [
-      "Developed a Full Stack web-application as part of final project",
-      "Completed Training on Java, Spring Boot and React",
-      "Completed Training on Python and MySQL",
+      "Developed a Full Stack web-application as part of final project.",
+      "Completed Training on Java, Spring Boot and React.",
+      "Completed Training on Python and MySQL.",
     ],
   },
   {
@@ -49,7 +54,12 @@ export const profExp = [
     year: `March 2019 - October 2019`,
     company: `Thinking Stack Inc`,
     location: `Bengaluru, Karnataka`,
-    details: [],
+    details: [
+      "Engaged in exploration of  new technologies, software packages and products as needed for use in the projects.",
+      "Learned and applied skills for Front-end integration with MinIO (Amazon S3 bucket)",
+      "Worked on JHipster monolith applications with Java and Angular stack.",
+      "Experienced on working in enterprise scale project.",
+    ],
   },
 ];
 
