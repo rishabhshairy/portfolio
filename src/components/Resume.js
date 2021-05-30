@@ -1,61 +1,12 @@
 import React from "react";
 import "../css/style.css";
+import { educationInfo, infoSummary, profExp } from "../static/resumeDetails";
 export default function Resume() {
-  // const summaryDesc = ``;
-  const info = {
-    name: `Rishabh Shairy`,
-    emailId: `rishabhshairy29@gmail.com`,
-    city: `Bengaluru, Karnataka`,
-    desc: `Innovative and deadline-driven Software Engineer 1.5+ years
-    of experience designing and developing user-centered
-    softwares. Experienced in mapping clients’ business requirements and translating these requirements into functional
-    specifications, services, implementations and custom designing solutions`,
-  };
+  const info = infoSummary;
 
-  const educationInfo = [
-    {
-      id: 1,
-      collegeName: `St. Thomas' College Of Engineering and Technology`,
-      year: `August 2015 - June 2019`,
-      degree: `B.Tech in Computer Science and Engineering`,
-      marks: `8.81 GPA`,
-    },
-    {
-      id: 2,
-      collegeName: `Jawahar Vidya Mandir, Shyamali`,
-      year: `June 2012 - May 2014`,
-      degree: `Senior Secondary Education / Class XII`,
-      marks: `84 %`,
-    },
-    {
-      id: 3,
-      collegeName: `Jawahar Vidya Mandir, Shyamali`,
-      year: `March 2011 - May 2012`,
-      degree: `Secondary Education / Class X`,
-      marks: `9.2 GPA`,
-    },
-  ];
+  const education = educationInfo;
 
-  const profExp = [
-    { id: 1,
-      role: `System Engineer`,
-      year: `April 2020 - Present`,
-      company: `Infosys Ltd`,
-      location: `Bengaluru, Karnataka`,
-    },
-    { id: 2,
-      role: `System Engineer Trainee`,
-      year: `November 2019 - March 2020`,
-      company: `Infosys Ltd`,
-      location: `Mysore, Karnataka`,
-    },
-    { id: 3,
-      role: `Full Stack Developer Intern`,
-      year: `March 2019 - October 2019`,
-      company: `Thinking Stack Inc`,
-      location: `Bengaluru, Karnataka`,
-    },
-  ];
+  const prof = profExp;
 
   return (
     <section id="resume" className="resume" style={{ padding: "60px 0" }}>
@@ -79,7 +30,7 @@ export default function Resume() {
             </div>
 
             <h3 className="resume-title">Education</h3>
-            {educationInfo.map((edItem) => {
+            {education.map((edItem) => {
               return (
                 <div className="resume-item" key={edItem.id}>
                   <h4>{edItem.degree}</h4>
@@ -94,7 +45,7 @@ export default function Resume() {
           </div>
           <div className="col-lg-6">
             <h3 className="resume-title">Professional Experience</h3>
-            {profExp.map((exp) => {
+            {prof.map((exp) => {
               return (
                 <div className="resume-item" key={exp.id}>
                   <h4>{exp.role}</h4>
@@ -103,7 +54,11 @@ export default function Resume() {
                   <p>
                     <em>{exp.location}</em>
                   </p>
-                  <ul></ul>
+                  <ul>
+                    {exp.details.map((data, index) => {
+                      return <li key={index}>{data}</li>;
+                    })}
+                  </ul>
                 </div>
               );
             })}
