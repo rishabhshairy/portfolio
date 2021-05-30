@@ -54,7 +54,11 @@ export default function Resume() {
                   <p>
                     <em>{exp.location}</em>
                   </p>
-                  <ul></ul>
+                  <ul>
+                    {exp.details.map((data, index) => {
+                      return <li key={index}>{data}</li>;
+                    })}
+                  </ul>
                 </div>
               );
             })}
