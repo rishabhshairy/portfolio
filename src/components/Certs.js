@@ -40,7 +40,7 @@ export default function Certs() {
                 <span style={{ fontWeight: "bold" }}>October 2023</span>
               </p>
               <p>
-                Score:<span style={{ fontWeight: "bold" }}> 914 / 1000</span>
+                Score:<span style={{ fontWeight: "bold" }}> 917 / 1000</span>
               </p>
             </div>
           </div>
@@ -74,7 +74,7 @@ export default function Certs() {
                 Validity: <span style={{ fontWeight: "bold" }}>Lifetime</span>
               </p>
               <p>
-                Score:<span style={{ fontWeight: "bold" }}> 81 %</span>
+                Score:<span style={{ fontWeight: "bold" }}> 88 %</span>
               </p>
             </div>
           </div>
