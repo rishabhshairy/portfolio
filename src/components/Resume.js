@@ -1,6 +1,11 @@
 import React from "react";
 import "../css/style.css";
-import { educationInfo, infoSummary, profExp } from "../static/resumeDetails";
+import {
+  educationInfo,
+  infoSummary,
+  profExp,
+  internship,
+} from "../static/resumeDetails";
 export default function Resume() {
   const info = infoSummary;
 
@@ -17,7 +22,7 @@ export default function Resume() {
 
         <div className="row">
           <div className="col-lg-6">
-            <h3 className="resume-title">Sumary</h3>
+            <h3 className="resume-title">Summary</h3>
             <div className="resume-item pb-0">
               <h4>{info.name}</h4>
               <p>
@@ -39,6 +44,25 @@ export default function Resume() {
                     <em>{edItem.collegeName}</em>
                   </p>
                   <p>{edItem.marks}</p>
+                </div>
+              );
+            })}
+
+            <h3 className="resume-title">Internship</h3>
+            {internship.map((intern) => {
+              return (
+                <div className="resume-item" key={intern.id}>
+                  <h4>{intern.role}</h4>
+                  <h5>{intern.year}</h5>
+                  <p style={{ fontWeight: "bold" }}>{intern.company}</p>
+                  <p>
+                    <em>{intern.location}</em>
+                  </p>
+                  <ul>
+                    {intern.details.map((data, index) => {
+                      return <li key={index}>{data}</li>;
+                    })}
+                  </ul>
                 </div>
               );
             })}

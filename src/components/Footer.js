@@ -1,5 +1,8 @@
 import React from "react";
 import "../css/style.css";
+import { BsLinkedin } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
+import { SiLeetcode } from "react-icons/si";
 export default function Footer() {
   return (
     <footer id="footer">
@@ -7,14 +10,21 @@ export default function Footer() {
         <h3>Rishabh Shairy</h3>
         <a href="mailto:rishabhshairy29@gmail.com">rishabhshairy29@gmail.com</a>
         <div className="social-links">
-          <a href="https://github.com/rishabhshairy" className="github">
-            <i className="bx bxl-github"></i>
+          <a href="https://github.com/rishabhshairy" target="blank">
+            {" "}
+            <BsGithub />
           </a>
+          <span style={{padding:"5px"}}></span>
+          <a href="https://leetcode.com/u/shairy/" target="blank">
+            <SiLeetcode />
+          </a>
+          <span style={{padding:"5px"}}></span>
           <a
             href="https://www.linkedin.com/in/rishabhshairy/"
             className="linkedin"
+            target="blank"
           >
-            <i className="bx bxl-linkedin"></i>
+            <BsLinkedin />
           </a>
         </div>
         <div>

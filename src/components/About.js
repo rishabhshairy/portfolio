@@ -2,15 +2,15 @@ import React from "react";
 import "../css/style.css";
 import profileImage from "../img/profile-pic.jpg";
 export default function About() {
-  const about = `Software Engineer with over 1.5 years of experience. Achievement
-  Driven and eager to contribute to success through challenging
-  tasks, hard work and dedication. Skilled in technical aspects
-  like coding of modules using the given design specifications,
-  debugging and fixing the defects as well as analysing the root
-  cause of the same.Rich exposure in the Software Development
-  Lifecycle (SDLC) right from requirement analysis, documentation
-  (functional specifications, technical design), coding and
-  debugging.`;
+const skills = [
+  "Software Engineer with 5+ years of experience specializing in microservices, cloud infrastructure, and full-stack development.",
+  "Proficient in designing, developing, and deploying scalable applications using Java, Spring Boot, AWS, MongoDB, Angular, and Azure DevOps.",
+  "Expert in driving performance improvements, enhancing user experiences, and migrating legacy systems to modern architectures.",
+  "Skilled in all stages of the Software Development Lifecycle (SDLC), from requirement analysis to coding, debugging, and defect resolution.",
+  "Proven success in project leadership, improving system performance by 25%, automating processes, and optimizing backend workflows for large-scale systems.",
+  "Committed to continuous learning, delivering high-quality solutions, and meeting delivery deadlines in fast-paced, dynamic environments."
+];
+
   return (
     <div>
       <section id="about" className="about" style={{ padding: "60px 0" }}>
@@ -37,26 +37,32 @@ export default function About() {
                       <i className="icofont-rounded-right"></i>{" "}
                       <strong>City:</strong> Bengaluru, Karnataka
                     </li>
+                  </ul>
+                </div>
+                <div className="col-lg-6">
+                  <ul>
+                    {/* <li>
+                      <i className="icofont-rounded-right"></i>{" "}
+                      <strong>Age:</strong> 24
+                    </li> */}
+                    <li>
+                      <i className="icofont-rounded-right"></i>{" "}
+                      <strong>Degree:</strong> B.Tech
+                    </li>
                     <li>
                       <i className="icofont-rounded-right"></i>{" "}
                       <strong>Email:</strong> rishabhshairy29@gmail.com
                     </li>
                   </ul>
                 </div>
-                <div className="col-lg-6">
-                  <ul>
-                    <li>
-                      <i className="icofont-rounded-right"></i>{" "}
-                      <strong>Age:</strong> 24
-                    </li>
-                    <li>
-                      <i className="icofont-rounded-right"></i>{" "}
-                      <strong>Degree:</strong> B.Tech
-                    </li>
-                  </ul>
-                </div>
               </div>
-              <p>{about}</p>
+              {
+                skills.map((skill,index) => {
+                  return (
+                    <li>{skill}</li>
+                  );
+                })
+              }
             </div>
           </div>
         </div>
